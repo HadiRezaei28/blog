@@ -12,7 +12,7 @@ import "./styles/fonts.css";
 import App from "./App";
 
 const client = new ApolloClient({
-  uri: "https://api-ca-central-1.hygraph.com/v2/clf1fwcu72t9z01uj3j9becnh/master",
+  uri: process.env.REACT_APP_HYGRAPH_URI,
   cache: new InMemoryCache(),
 });
 
