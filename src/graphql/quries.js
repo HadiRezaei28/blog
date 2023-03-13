@@ -41,7 +41,7 @@ const GET_AUTHOR_INFO = gql`
       field
       name
       description {
-        html
+        text
       }
       posts {
         coverPhoto {
