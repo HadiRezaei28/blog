@@ -4,6 +4,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { GET_AUTHOR_INFO } from "../../graphql/quries";
 import CardEL from "../shared/CardEL";
+import Loader from "../shared/Loader";
 
 const AuthorPage = () => {
   const { slug } = useParams();
@@ -12,7 +13,7 @@ const AuthorPage = () => {
     variables: { slug },
   });
 
-  if (loading) return <h3>Loading...</h3>;
+  if (loading) return <Loader />;
   if (errors) return <h3>Errors...</h3>;
 
   const {
