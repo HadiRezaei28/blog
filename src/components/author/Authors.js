@@ -27,7 +27,7 @@ const Authors = () => {
                 textDecoration: "none",
               }}
             >
-              <Avatar src={author.avatar.url} />
+              <Avatar src={author.avatar.url} sx={{marginRight: 2}} />
               <Typography component="p" variant="p" color="text.secondary">
                 {author.name}
               </Typography>

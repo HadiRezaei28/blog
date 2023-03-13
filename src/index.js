@@ -10,6 +10,7 @@ import { theme } from "./mui/theme";
 import "./styles/index.css";
 import "./styles/fonts.css";
 import App from "./App";
+import { BrowserRouter } from "react-router-dom";
 
 const client = new ApolloClient({
   uri: process.env.REACT_APP_HYGRAPH_URI,
@@ -24,10 +25,12 @@ const cacheRtl = createCache({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ApolloProvider client={client}>
-    <CacheProvider value={cacheRtl}>
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
-    </CacheProvider>
+    <BrowserRouter>
+      <CacheProvider value={cacheRtl}>
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      </CacheProvider>
+    </BrowserRouter>
   </ApolloProvider>
 );
