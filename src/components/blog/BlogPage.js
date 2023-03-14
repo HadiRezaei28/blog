@@ -79,7 +79,12 @@ const BlogPage = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} mt={5} sx={{textAlign:"justify", lineHeight: "30px"}}>
+        <Grid
+          item
+          xs={12}
+          mt={5}
+          sx={{ textAlign: "justify", lineHeight: "30px" }}
+        >
           {data.post.content.text}
         </Grid>
         <Grid item xs={12}>
