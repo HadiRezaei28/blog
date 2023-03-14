@@ -12,6 +12,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { GET_BLOG_INFO } from "../../graphql/quries";
 import Loader from "../shared/Loader";
 import { ArrowBackRounded } from "@mui/icons-material";
+import CommentForm from "../comment/CommentForm";
 
 const BlogPage = () => {
   const { slug } = useParams();
@@ -79,6 +80,9 @@ const BlogPage = () => {
         </Grid>
         <Grid item xs={12} mt={5}>
           {data.post.content.text}
+        </Grid>
+        <Grid item xs={12}>
+          <CommentForm slug={slug} />
         </Grid>
       </Grid>
     </Container>
