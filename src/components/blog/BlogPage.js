@@ -13,6 +13,7 @@ import { GET_BLOG_INFO } from "../../graphql/quries";
 import Loader from "../shared/Loader";
 import { ArrowBackRounded } from "@mui/icons-material";
 import CommentForm from "../comment/CommentForm";
+import Comment from "../comment/Comment";
 
 const BlogPage = () => {
   const { slug } = useParams();
@@ -83,6 +84,9 @@ const BlogPage = () => {
         </Grid>
         <Grid item xs={12}>
           <CommentForm slug={slug} />
+        </Grid>
+        <Grid item xs={12}>
+          <Comment slug={slug} />
         </Grid>
       </Grid>
     </Container>
