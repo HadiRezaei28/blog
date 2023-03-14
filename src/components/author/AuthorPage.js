@@ -22,7 +22,7 @@ const AuthorPage = () => {
 
   return (
     <Container maxWidth="lg">
-      <Grid container mt={10}>
+      <Grid container mt={10} padding={3}>
         <Grid
           item
           xs={12}
