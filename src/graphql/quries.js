@@ -5,6 +5,7 @@ const GET_BLOGS_INFO = gql`
     posts {
       author {
         name
+        field
         avatar {
           url
         }
@@ -25,6 +26,7 @@ const GET_AUTHORS_INFO = gql`
       id
       name
       slug
+      field
       avatar {
         url
       }
